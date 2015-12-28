@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o errexit
+
 ## AI2 data
 if [ "$#" -eq 0 ]
 then echo "Usage : sh run.sh dataset(AI2/IL/CC) module(optional)(Rel/Pair/Order/Cons)"
