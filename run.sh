@@ -4,6 +4,8 @@ then echo "Usage : sh run.sh dataset(AI2/IL/CC) module(optional)(Rel/Pair/Order/
     exit 2
 fi
 
+mkdir -p log models
+
 if [ "$1" = "AI2" ]
 then
     echo "Running on AI2 datset"
