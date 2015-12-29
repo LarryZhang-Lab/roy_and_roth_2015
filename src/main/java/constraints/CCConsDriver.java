@@ -35,7 +35,9 @@ public class CCConsDriver {
 		int numFolds = Folds.getNumFolds("CC");
 		for(int i=0;i<numFolds;i++) {
 			Params.printMistakes = true;
-			acc += doTest(i);
+			double foldAcc = doTest(i);
+			System.out.println("Fold " + i + " accuracy : " + foldAcc);
+			acc += foldAcc;
 		}
 		System.out.println("CV : " + (acc/numFolds));
 	}

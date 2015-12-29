@@ -86,7 +86,9 @@ public class ConsDriver {
 			System.out.println("wRel : "+ConsInfSolver.wRel);
 			System.out.println("Testing");
 			Params.printMistakes = true;
-			acc += doTest(i, dataset);
+			double foldAcc = doTest(i, dataset);
+			System.out.println("Fold " + i + " accuracy : " + foldAcc);
+			acc += foldAcc;
 		}
 		System.out.println("CV : " + (acc/numFolds));
 	}
